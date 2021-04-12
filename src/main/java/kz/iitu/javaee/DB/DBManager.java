@@ -129,16 +129,13 @@ public class DBManager {
             PreparedStatement statement = connection.prepareStatement("" +
                     "INSERT into publications (id, name, description, rating)" +
                     "VALUES (NULL , ?,?,?)");
-
             statement.setString(1, publication.getName());
             statement.setString(2, publication.getDescription());
             statement.setDouble(3, publication.getRating());
-
             rows = statement.executeUpdate();
             statement.close();
         } catch (Exception e) {
             e.printStackTrace();
-
         }
         return rows > 0;
     }
