@@ -7,6 +7,7 @@ public class Publication {
     private double rating;
 
     public Publication() {
+        System.out.println("test commit");
     }
 
     public Publication(Long id, String name, String description, double rating) {
